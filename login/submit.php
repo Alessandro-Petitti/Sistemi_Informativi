@@ -1,5 +1,6 @@
 <?php
 
+echo "ciao";
 session_start();
 
 //se accediamo al file senza fare submit della form
