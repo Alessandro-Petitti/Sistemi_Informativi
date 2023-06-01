@@ -1,0 +1,11 @@
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+html{
+  background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
