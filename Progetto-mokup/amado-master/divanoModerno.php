@@ -70,8 +70,8 @@
                             <ol class="breadcrumb mt-50">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Sedie</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Sedia EcoLine</li>
+                                <li class="breadcrumb-item"><a href="#">Divani</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Divano Moderno</li>
                             </ol>
                         </nav>
                     </div>
@@ -82,13 +82,13 @@
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/Sedia_bianca_mod.jpg);">
+                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/divanoModerno.jpg);">
                                     </li>
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/Sedia_bianca_mod.jpg">
-                                            <img class="d-block w-100" src="img/product-img/Sedia_bianca_mod.jpg" alt="First slide">
+                                        <a class="gallery_img" href="img/product-img/divanoModerno.jpg">
+                                            <img class="d-block w-100" src="img/product-img/divanoModerno.jpg" alt="First slide">
                                         </a>
                                     </div>
 
@@ -102,9 +102,9 @@
                             <!-- Product Meta Data -->
                             <div class="product-meta-data">
                                 <div class="line"></div>
-                                <p class="product-price">€80</p>
+                                <p class="product-price">380€</p>
                                 <a href="product-details.html">
-                                    <h6>Sedia EcoLine</h6>
+                                    <h6>Divano Moderno</h6>
                                 </a>
                                 <!-- Ratings & Review -->
                                 <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
@@ -113,19 +113,25 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i style="color:grey" class="fa fa-star" aria-hidden="true"></i>
+
 
                                     </div>
                                     <div class="review">
-                                        <a href="sedia_bianca.html">Classica ed elegante</a>
+                                        <a href="sedia_bianca.html">L'ideale per il tuo salone</a>
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
-                                <p class="avaibility"><i class="fa fa-circle"></i> Disponibile</p>
+                                <p class="avaibility"><i class="fa fa-circle" style="color:red"></i>Non disponibile</p>
                             </div>
 
                             <div class="short_overview my-5">
-                                <p>La sedia EcoLine è un'opzione ecologica e funzionale per il tuo ambiente di lavoro o studio. Realizzata in plastica semi dura, ma riciclata, offre una soluzione sostenibile senza compromettere la durata e la resistenza. Il suo design ergonomico garantisce una postura corretta e confortevole durante le lunghe sessioni sedute. La sedia è dotata di uno schienale sagomato che si adatta alle curve naturali della schiena, offrendo sostegno e comfort ottimali. La sedia EcoLine presenta una base solida e stabile con una struttura leggera, che facilita il movimento e la mobilità. Con il suo stile minimalista e il contributo positivo all'ambiente attraverso l'utilizzo di materiali riciclati, la sedia EcoLine è una scelta ideale per chi cerca una soluzione ecologica senza rinunciare al comfort e al design.</p>
+                                <p>Il divano moderno che ti presento è un vero e proprio capolavoro di design contemporaneo. Con linee pulite e forme eleganti, questo divano rappresenta l'equilibrio perfetto tra stile e comfort.
+                                  Il suo design minimalista si adatta perfettamente a qualsiasi spazio moderno, sia in un soggiorno di tendenza che in uno studio o in una sala d'attesa di un'azienda.
+
+                                  I cuscini imbottiti di questo divano sono morbidamente accoglienti e offrono un supporto ottimale per il massimo comfort. Rivestiti con tessuti di alta qualità, come velluto liscio o pelle di alta qualità, i cuscini possono essere personalizzati in una vasta gamma di colori per soddisfare i gusti individuali e armonizzarsi con l'arredamento esistente.
+                                  Questo divano moderno è un'opzione ideale per coloro che apprezzano l'estetica contemporanea e cercano un pezzo di arredamento che si distingua per la sua eleganza e raffinatezza.
+                                  Scegliendo questo divano moderno, ti assicuri di avere un elemento di design straordinario che renderà la tua casa o il tuo ufficio un luogo di grande stile e comfort.
+                                </p>
                             </div>
 
                             <!-- Add to Cart Form -->
@@ -151,12 +157,11 @@
     <!-- ##### Main Content Wrapper End ##### -->
 
     <!-- ##### Newsletter Area Start ##### -->
-    <?php
-    include "newsletter.php"; ?>
+    <?php include "newsletter.php"; ?>
     <!-- ##### Newsletter Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <?php include "footer.php"; ?>
+  <?php include 'footer.php'; ?>
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->

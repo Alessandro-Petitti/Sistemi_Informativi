@@ -66,14 +66,16 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mt-50">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Sedie</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Sedia EcoLine</li>
-                            </ol>
-                        </nav>
+                      <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb mt-50">
+                              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
+                              <li class="breadcrumb-item"><a href="#">Vai</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Coppia di Vasi</li>
+                          </ol>
+                      </nav>
+
+
                     </div>
                 </div>
 
@@ -82,13 +84,14 @@
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/Sedia_bianca_mod.jpg);">
+                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/coppiadivasi.jpg);">
                                     </li>
+
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/Sedia_bianca_mod.jpg">
-                                            <img class="d-block w-100" src="img/product-img/Sedia_bianca_mod.jpg" alt="First slide">
+                                        <a class="gallery_img" href="img/product-img/coppiadivasi.jpg">
+                                            <img class="d-block w-100" src="img/product-img/coppiadivasi.jpg" alt="First slide">
                                         </a>
                                     </div>
 
@@ -102,9 +105,9 @@
                             <!-- Product Meta Data -->
                             <div class="product-meta-data">
                                 <div class="line"></div>
-                                <p class="product-price">€80</p>
+                                <p class="product-price">€45</p>
                                 <a href="product-details.html">
-                                    <h6>Sedia EcoLine</h6>
+                                    <h6>Coppia di Vasi</h6>
                                 </a>
                                 <!-- Ratings & Review -->
                                 <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
@@ -117,15 +120,17 @@
 
                                     </div>
                                     <div class="review">
-                                        <a href="sedia_bianca.html">Classica ed elegante</a>
+                                        <a href="#">Rinfrescanti</a>
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
-                                <p class="avaibility"><i class="fa fa-circle"></i> Disponibile</p>
+                                <p class="avaibility"><i class="fa fa-circle"></i> In Stock</p>
                             </div>
 
                             <div class="short_overview my-5">
-                                <p>La sedia EcoLine è un'opzione ecologica e funzionale per il tuo ambiente di lavoro o studio. Realizzata in plastica semi dura, ma riciclata, offre una soluzione sostenibile senza compromettere la durata e la resistenza. Il suo design ergonomico garantisce una postura corretta e confortevole durante le lunghe sessioni sedute. La sedia è dotata di uno schienale sagomato che si adatta alle curve naturali della schiena, offrendo sostegno e comfort ottimali. La sedia EcoLine presenta una base solida e stabile con una struttura leggera, che facilita il movimento e la mobilità. Con il suo stile minimalista e il contributo positivo all'ambiente attraverso l'utilizzo di materiali riciclati, la sedia EcoLine è una scelta ideale per chi cerca una soluzione ecologica senza rinunciare al comfort e al design.</p>
+                                <p>Una coppia di vasi in legno può essere una scelta affascinante per l'arredamento della tua casa. Questi vasi sono realizzati interamente in legno e possono presentare una varietà di forme, dimensioni e stili. Il legno utilizzato può essere di diversi tipi, come il legno massello, il legno di teak, il legno di mango o altre essenze pregiate. Le dimensioni dei vasi possono variare da piccoli e delicati ad ampi e imponenti. Alcuni possono essere utilizzati come vasi per fiori o piante, mentre altri possono essere decorativi, esposti come oggetti d'arte autonomi. I vasi in legno possono adattarsi a diversi stili di arredamento, che vanno dal rustico al moderno. Puoi posizionarli su tavoli, mensole o davanzali, sia in interni che in esterni, per aggiungere un tocco di calore e un elemento naturale al tuo ambiente. Con la loro bellezza naturale, durabilità e versatilità, questi vasi offrono un modo unico per decorare i tuoi spazi e aggiungere un tocco di autenticità e fascino rustico.
+
+                                </p>
                             </div>
 
                             <!-- Add to Cart Form -->
@@ -138,7 +143,7 @@
                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
                                     </div>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn amado-btn">Aggiungi al carrello</button>
+                                <button type="submit" name="addtocart" value="5" class="btn amado-btn">Add to cart</button>
                             </form>
 
                         </div>
@@ -151,12 +156,11 @@
     <!-- ##### Main Content Wrapper End ##### -->
 
     <!-- ##### Newsletter Area Start ##### -->
-    <?php
-    include "newsletter.php"; ?>
+    <?php include 'newsletter.php'; ?>
     <!-- ##### Newsletter Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <?php include "footer.php"; ?>
+    <?php include 'footer.php'; ?>
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
