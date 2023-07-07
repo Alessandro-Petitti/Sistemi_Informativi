@@ -21,7 +21,7 @@
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Registrati</h1>
-							<form  action="../indexpaginaprotetta.php" method="POST" class="needs-validation" novalidate="" autocomplete="off">
+							<form  action="../sezione_protetta/indexpaginaprotetta.php" method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Nome</label>
 									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
@@ -38,10 +38,7 @@
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="dataDiNascita">Data di nascita</label>
-									<input id="dataDiNascita" type="date" class="form-control" name="dataDiNascita" value="" required autofocus>
-
-
-
+									<input id="dataDiNascita" type="text" class="form-control" name="dataDiNascita" placeholder="YYYY-MM-DD"  value="" required autofocus>
 									<div class="invalid-feedback">
 										La data di nascita è richiesta
 									</div>
