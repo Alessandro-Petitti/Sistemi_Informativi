@@ -24,8 +24,8 @@ $cfg['webtheme'] =   $server .   substr($cfg['theme'], strlen($ROOT));
 unset($ROOT);
 
 //Parametri del database
-$cfg['dbname'] = "mydb";
-$cfg['dbhost'] = "127.0.0.1";
+$cfg['dbname'] = "nuovoProgetto";
+$cfg['dbhost'] = "127.0.0.1:8889";
 $cfg['dbuser'] = "root";
-$cfg['dbpwd'] = "federico";
+$cfg['dbpwd'] = "root";
 ?>

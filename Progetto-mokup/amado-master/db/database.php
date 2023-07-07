@@ -18,7 +18,7 @@
         //In PHP, die() è una funzione che viene utilizzata per terminare immediatamente
         //l'esecuzione di uno script e
         //visualizzare un messaggio di errore specificato dall'utente.
-        die("Connection failed: " . $conn->connect_error);
+        die("Connection cacca: " . $conn->connect_error);
     }
 
     return $conn;
