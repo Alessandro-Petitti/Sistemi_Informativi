@@ -1,4 +1,15 @@
-
+<?php session_start();
+	if ( $_SESSION['access_status']== 'No')
+	{
+	  echo '<script>alert("Username già in uso, usane un altro o accedi")</script>';
+		$_SESSION['access_status'] = 'Si';
+	}
+	elseif ($_SESSION['password_status'] == 'No')
+	 {
+			echo "<script>alert('Le password non corrispondono')</script>";
+			$_SESSION['password_status'] = 'Si';
+		}
+	?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +32,7 @@
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-4">Registrati</h1>
-							<form  action="../sezione_protetta/indexpaginaprotetta.php" method="POST" class="needs-validation" novalidate="" autocomplete="off">
+							<form  action="../indexpaginaprotetta.php" method="POST" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Nome</label>
 									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
@@ -82,7 +93,7 @@
 						</div>
 						<div class="card-footer py-3 border-0">
 							<div class="text-center">
-								Hai già un account? <a href="login.html" class="text-dark">Login</a>
+								Hai già un account? <a href="login.php" class="text-dark">Login</a>
 							</div>
 						</div>
 					</div>

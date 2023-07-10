@@ -1,5 +1,10 @@
 <?php
 session_start();
+if ( $_SESSION['login_status']== 'No')
+{
+	echo '<h1>alert("Combinazione di Username e Password non corrette, riprova")</h1>';
+	$_SESSION['access_status'] = 'Si';
+}
 ?>
 
 
@@ -25,10 +30,10 @@ session_start();
 							<h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
 							<form method="POST" action="../indexpaginaprotetta.php" class="needs-validation" novalidate="" autocomplete="off">
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="email">Indirizzo Email</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+								<label class="mb-2 text-muted" for="Username">Username</label>
+									<input id="Username" type="text" class="form-control" name="Username" value="" required autofocus>
 									<div class="invalid-feedback">
-										Email non valida
+										username non inserito
 									</div>
 								</div>
 
@@ -50,7 +55,16 @@ session_start();
 										<input type="checkbox" name="remember" id="remember" class="form-check-input">
 										<label for="remember" class="form-check-label">Ricordami</label>
 									</div>
-									<button type="submit" class="btn btn-primary ms-auto">
+									<script>
+										function set_login() {
+											document.querySelector(".button_login").onclick = function() {
+												<?php
+												$_SESSION['Provenience'] = 'login';
+												 ?>
+											}
+										}
+									</script>
+									<button type="submit" id = "button_login" class="btn btn-primary ms-auto" onclick="set_login()">
 										Login
 									</button>
 								</div>
