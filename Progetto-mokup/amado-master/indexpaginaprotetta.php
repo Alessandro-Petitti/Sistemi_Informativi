@@ -5,7 +5,14 @@ require_once 'db/database.php';
 ?>
 
           <?php
-          if(isset($_POST["Username"]) && $_SERVER['REQUEST_METHOD'] === 'POST'){
+
+          function password_is_same($password1, $password2) {
+            return $password1 === $password2;
+          }
+
+
+
+          if(isset($_POST["Username"]) && $_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] != 'login'){
             //creo un array associativo con tutti i valori che ho passato dal form riprelevati in POST
             //i nomi dell'array associativo potrebbero anche essere diversi
             $com = array(
@@ -14,7 +21,8 @@ require_once 'db/database.php';
                 "Username"        =>    $_REQUEST["Username"],
                 "email"           =>    $_REQUEST["email"],
                 "dataDiNascita"   =>    $_REQUEST["dataDiNascita"],
-                "password"        =>    $_REQUEST["password"]
+                "password"        =>    $_REQUEST["password"],
+                "password_c"      =>    $_REQUEST["password_confirm"]
             );
             $conn = openconnection();
             $sql = "SELECT * FROM Utenti u WHERE u.Username='".$com["Username"]."'";
@@ -24,6 +32,7 @@ require_once 'db/database.php';
               header("location: login_section/register.php");
             }
             else{
+              if(password_is_same('".$com["password"]."', '".$com["password_c"]."')==TRUE) {
               //Attenzione ai valori numerici ed ai valori stringa!!
               //Verifica per capire la differenza
               //(apice si per le stringhe, apice no per gli interi o i campi chiave)
@@ -43,11 +52,31 @@ require_once 'db/database.php';
                 $message_add="Errore del Server: Utente non inserito";
               }
               closeconnection($conn);
-            }
             if(isset($message_add)){
               echo "<script>alert('$message_add')</script>";
             }
+          } else  {
+            $_SESSION['password_status'] = 'No';
+            header("location: login_section/register.php");
           }
+         }
+        }
+        else { //Controllo per il login
+          $com = array(
+              "Username"        =>    $_REQUEST["Username"],
+              "password"        =>    $_REQUEST["password"],
+          );
+          $conn = openconnection();
+          $sql = "SELECT * FROM Utenti u WHERE u.Username='".$com["Username"]."' AND u.Password='".$com["password"]."'";
+          $result = $conn->query($sql);
+          if ($result->num_rows ==0 ) {
+              $_SESSION['login_status'] = 'No';
+              header("location: login_section/login.php");
+
+          }
+
+        }
+
           ?>
 
 <!DOCTYPE html>
