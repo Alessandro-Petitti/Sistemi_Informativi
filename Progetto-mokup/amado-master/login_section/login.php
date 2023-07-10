@@ -2,8 +2,8 @@
 session_start();
 if ( $_SESSION['login_status']== 'No')
 {
-	echo '<h1>alert("Combinazione di Username e Password non corrette, riprova")</h1>';
-	$_SESSION['access_status'] = 'Si';
+	echo '<h1>Combinazione di Username e Password non corrette, riprova</h1>';
+	$_SESSION['login_status'] = 'Si';
 }
 ?>
 
@@ -14,6 +14,8 @@ if ( $_SESSION['login_status']== 'No')
 	<meta charset="utf-8">
 
 	<title>Pagina di Login</title>
+	<!-- Favicon  -->
+	<link rel="icon" href="../img/core-img/favicon.ico">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
@@ -23,7 +25,7 @@ if ( $_SESSION['login_status']== 'No')
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-5">
-						<a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" width="400"></a>
+						<a href="../index.php"><img src="../img/core-img/logo.png" alt="logo" width="400"></a>
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
@@ -56,7 +58,7 @@ if ( $_SESSION['login_status']== 'No')
 										<label for="remember" class="form-check-label">Ricordami</label>
 									</div>
 									<script>
-										function set_login() {
+										function set_provenience() {
 											document.querySelector(".button_login").onclick = function() {
 												<?php
 												$_SESSION['Provenience'] = 'login';
@@ -64,7 +66,7 @@ if ( $_SESSION['login_status']== 'No')
 											}
 										}
 									</script>
-									<button type="submit" id = "button_login" class="btn btn-primary ms-auto" onclick="set_login()">
+									<button type="submit" id = "button_login" class="btn btn-primary ms-auto" onclick="set_provenience()">
 										Login
 									</button>
 								</div>

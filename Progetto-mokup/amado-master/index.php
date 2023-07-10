@@ -1,94 +1,7 @@
-<?php
-require_once 'db/config.php';
-require_once 'db/database.php';
-  session_start();
-?>
-
-          <?php
-
-          function password_is_same($password1, $password2) {
-            return $password1 === $password2;
-          }
-
-
-
-          if(isset($_POST["Username"]) && $_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] == 'register')
-          {
-              //creo un array associativo con tutti i valori che ho passato dal form riprelevati in POST
-              //i nomi dell'array associativo potrebbero anche essere diversi
-              $com = array(
-                  "name"            =>    $_REQUEST["name"],
-                  "cognome"         =>    $_REQUEST["cognome"],
-                  "Username"        =>    $_REQUEST["Username"],
-                  "email"           =>    $_REQUEST["email"],
-                  "dataDiNascita"   =>    $_REQUEST["dataDiNascita"],
-                  "password"        =>    $_REQUEST["password"],
-                  "password_c"      =>    $_REQUEST["password_confirm"]
-              );
-              $conn = openconnection();
-              $sql = "SELECT * FROM Utenti u WHERE u.Username='".$com["Username"]."'";
-              $result = $conn->query($sql);
-              if ($result->num_rows > 0) {
-                $_SESSION['username_già_in_uso'] = 'Si';
-                header("location: login_section/register.php");
-              }
-              elseif($result->num_rows == 0)
-              {
-                  if(password_is_same($com["password"],$com["password_c"] )== TRUE)
-                  {
-                      //Attenzione ai valori numerici ed ai valori stringa!!
-                      //Verifica per capire la differenza
-                      //(apice si per le stringhe, apice no per gli interi o i campi chiave)
-                      $sql="INSERT INTO Utenti (Nome, Cognome, Username, Email, DataDiNascita, Password)
-                      VALUES ('".$com["name"]."',
-                              '".$com["cognome"]."',
-                              '".$com["Username"]."',
-                              '".$com["email"]."',
-                              '".$com["dataDiNascita"]."',
-                              '".$com["password"]."'
-                      )";
-                      $result = $conn->query($sql);
-                      if ($result==TRUE)
-                      {
-                        $message_add="Utente inserito";
-                        $_SESSION['Username_utente'] = $com['Username'];
-                      }
-                      else
-                      {
-                        $message_add="Errore del Server: Utente non inserito";
-                      }
-                      closeconnection($conn);
-                      if(isset($message_add))
-                      {
-                        echo "<script>alert('Utente correttamente inserito nel database')</script>";
-                      }
-                  }
-                 else
-                 {
-                  $_SESSION['password_status'] = 'No';
-                  header("location: login_section/register.php");
-                }
-              }
-        }
-        elseif(isset($_POST["Username"]) && $_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] == 'login')
-         { //Controllo per il login
-          $com = array(
-              "Username"        =>    $_REQUEST["Username"],
-              "password"        =>    $_REQUEST["password"],
-          );
-          $conn = openconnection();
-          $sql = "SELECT * FROM Utenti u WHERE u.Username='".$com["Username"]."' AND u.Password='".$com["password"]."'";
-          $result = $conn->query($sql);
-          if ($result->num_rows ==0 ) {
-              $_SESSION['login_status'] = 'No';
-              header("location: login_section/login.php");
-          }
-          $_SESSION['Username_utente'] = $com['Username'];
-          closeconnection($conn);
-        }
-
-          ?>
-
+<?php session_start();
+  if ($_SESSION['LOGOUT'] == 'true')
+  session_unset();
+  session_destroy();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,8 +43,8 @@ require_once 'db/database.php';
             </div>
         </div>
     </div>
-    <!-- Search Wrapper Area End-->
-    <!--   -->
+    <!-- Search Wrapper Area End -->
+
     <!-- ##### Main Content Wrapper Start ##### -->
     <div class="main-content-wrapper d-flex clearfix">
 
@@ -148,7 +61,33 @@ require_once 'db/database.php';
         </div>
 
         <!-- Header Area Start -->
-        <?php include 'header.php'; ?>
+        <header class="header-area clearfix">
+            <!-- Close Icon -->
+            <div class="nav-close">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
+            <!-- Logo -->
+            <div >
+                <a href="index.php"><img src="img/core-img/logopic.png" alt="" width = "300" height = "183"></a><br> <br><br>
+            </div>
+            <!-- Amado Nav -->
+            <nav class="amado-nav">
+              <a href="login_section/login.php" class="btn amado-btn mb-15">Login</a>
+                <ul>
+                    <li class="active"><a href="index.php">Home</a></li>
+                    <li><a href="shop.php">Shop</a></li>
+                    <li><a href="product-details.html">Prodotti</a></li>
+                    <li><a href="cart.html">Carrello</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+
+            <!-- Cart Menu -->
+            <div class="cart-fav-search mb-100">
+                <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
+            </div>
+            <!-- Social Button -->
+        </header>
         <!-- Header Area End -->
 
         <!-- Product Catagories Area Start -->

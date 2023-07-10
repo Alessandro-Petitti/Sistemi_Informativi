@@ -1,11 +1,11 @@
 <?php session_start();
-	if ( $_SESSION['access_status']== 'No')
+	if ( $_SESSION['username_già_in_uso']== 'Si')
 	{
 	  echo '<script>alert("Username già in uso, usane un altro o accedi")</script>';
-		$_SESSION['access_status'] = 'Si';
+		$_SESSION['username_già_in_uso'] = 'No';
 	}
 	elseif ($_SESSION['password_status'] == 'No')
-	 {
+	  {
 			echo "<script>alert('Le password non corrispondono')</script>";
 			$_SESSION['password_status'] = 'Si';
 		}
@@ -17,7 +17,9 @@
 	<meta name="author" content="Muhamad Nauval Azhar">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="This is a login page template based on Bootstrap 5">
-	<title>Register Page</title>
+	<title>Pagina di Registrazione</title>
+	<!-- Favicon  -->
+	<link rel="icon" href="../img/core-img/favicon.ico">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 
@@ -27,7 +29,7 @@
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-5">
-						<a href="../index.html"><img src="../img/core-img/logo.png" alt="logo" width="400"></a>
+						<a href="../index.php"><img src="../img/core-img/logo.png" alt="logo" width="400"></a>
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
@@ -85,7 +87,16 @@
 								</p>
 
 								<div class="align-items-center d-flex">
-									<button type="submit" class="btn btn-primary ms-auto">
+									<script>
+										function set_provenience() {
+											document.querySelector(".button_register").onclick = function() {
+												<?php
+												$_SESSION['Provenience'] = 'register';
+												 ?>
+											}
+										}
+									</script>
+									<button type="submit" id = "button_register" class="btn btn-primary ms-auto" onclick="set_provenience()">
 										Registrati
 									</button>
 								</div>
