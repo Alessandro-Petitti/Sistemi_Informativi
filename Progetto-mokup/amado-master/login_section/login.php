@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ( $_SESSION['login_status']== 'No')
+if ( isset($_SESSION['login_status']) && $_SESSION['login_status']== 'No')
 {
 	echo '<h1>Combinazione di Username e Password non corrette, riprova</h1>';
 	$_SESSION['login_status'] = 'Si';
