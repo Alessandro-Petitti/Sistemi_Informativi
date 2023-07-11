@@ -1,5 +1,11 @@
 <?php
-require 'Function_utility.php';
+session_start();
+function check_login(){
+    // Verifica se l'utente ha effettuato l'accesso
+    if (isset($_SESSION['Username_utente']) && $_SESSION['Username_utente'] != "") {
+        return TRUE;
+    }
+  }
     ?>
 
 
@@ -30,7 +36,7 @@ require 'Function_utility.php';
          ?>
 
         <!-- Cart Menu -->
-        
+
         <!-- Social Button -->
     </header>
   </body>
