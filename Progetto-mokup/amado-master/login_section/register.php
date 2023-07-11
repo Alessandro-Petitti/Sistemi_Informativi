@@ -1,10 +1,10 @@
 <?php session_start();
-	if ( $_SESSION['username_già_in_uso']== 'Si')
+	if (isset($_SESSION['username_già_in_uso']) && $_SESSION['username_già_in_uso']== 'Si')
 	{
 	  echo '<script>alert("Username già in uso, usane un altro o accedi")</script>';
 		$_SESSION['username_già_in_uso'] = 'No';
 	}
-	elseif ($_SESSION['password_status'] == 'No')
+	elseif (isset($_SESSION['password_status']) && $_SESSION['password_status'] == 'No')
 	  {
 			echo "<script>alert('Le password non corrispondono')</script>";
 			$_SESSION['password_status'] = 'Si';

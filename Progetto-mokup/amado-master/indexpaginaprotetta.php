@@ -1,7 +1,8 @@
 <?php
 require_once 'db/config.php';
 require_once 'db/database.php';
-  session_start();
+   session_start();
+
 ?>
 
           <?php

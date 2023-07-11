@@ -1,5 +1,6 @@
 <?php session_start();
-  if ($_SESSION['LOGOUT'] == 'true')
+
+  if (isset($_SESSSION['LOGOUT']) && $_SESSION['LOGOUT'] == 'true')
   session_unset();
   session_destroy();?>
 <!DOCTYPE html>
