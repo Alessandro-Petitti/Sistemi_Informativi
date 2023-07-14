@@ -58,7 +58,9 @@
         </div>
 
         <!-- Header Area Start -->
-        <?php include 'header.php'; ?>
+        <?php
+        session_start();
+         include 'header.php'; ?>
         <!-- Header Area End -->
 
         <!-- Product Details Area Start -->
