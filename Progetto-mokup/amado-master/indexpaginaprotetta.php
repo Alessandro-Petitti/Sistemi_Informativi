@@ -163,7 +163,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 80€</p>
+                            <p>Da €80</p>
                             <h4>Sedia EcoLine</h4>
                         </div>
                     </a>
@@ -189,7 +189,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da $90</p>
+                            <p>Da €90</p>
                             <h4>Set di Vasi</h4>
                         </div>
                     </a>
@@ -202,7 +202,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da $390</p>
+                            <p>Da €390</p>
                             <h4>Divano Marrone</h4>
                         </div>
                     </a>
@@ -241,7 +241,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da $40</p>
+                            <p>Da €40</p>
                             <h4>Sedia di Legno</h4>
                         </div>
                     </a>
@@ -267,7 +267,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 318€</p>
+                            <p>Da €318</p>
                             <h4>piantana WoodGlow</h4>
                         </div>
                     </a>
@@ -280,7 +280,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 15€</p>
+                            <p>Da €15</p>
                             <h4>Orologio da comodino</h4>
                         </div>
                     </a>
@@ -292,7 +292,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 80€</p>
+                            <p>Da €80</p>
                             <h4>Lampada Da Studio</h4>
                         </div>
                     </a>
@@ -304,7 +304,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 60€</p>
+                            <p>Da €60</p>
                             <h4>Vaso Bianco</h4>
                         </div>
                     </a>
@@ -315,7 +315,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 45€</p>
+                            <p>Da €45</p>
                             <h4>Coppia di Vasi</h4>
                         </div>
                     </a>
@@ -326,7 +326,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 480€</p>
+                            <p>Da €480</p>
                             <h4>Divano Verde</h4>
                         </div>
                     </a>
@@ -337,7 +337,7 @@ require_once 'db/database.php';
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da 50€</p>
+                            <p>Da €50</p>
                             <h4>Orologio da parete</h4>
                         </div>
                     </a>
