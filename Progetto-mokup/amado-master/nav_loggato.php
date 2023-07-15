@@ -15,7 +15,16 @@
 
 </nav>
 <div class="cart-fav-search mb-100">
-    <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
+  <?php if(isset($_SESSION['cart_count']))
+  {
+    echo '<a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello<span>('.$_SESSION['cart_count'].')</span></a>';
+  }
+  else {
+      echo '<a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello(0)</a>';
+  }
+  ?>
+
+
     <script>
       function verify_logout() {
         document.querySelector(".button_logout").onclick = function() {

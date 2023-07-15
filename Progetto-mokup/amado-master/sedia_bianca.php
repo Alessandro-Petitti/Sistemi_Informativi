@@ -131,13 +131,7 @@ require_once 'Function_utility.php';
                             </div>
 
                             <!-- Add to Cart Form -->
-                            <?php include "add_to_cart.php"; ?>
-
-
-
-
-
-
+                            <?php $_SESSION["id_prod"] = ADD_TO_CART(1) ?>
 
                         </div>
                     </div>

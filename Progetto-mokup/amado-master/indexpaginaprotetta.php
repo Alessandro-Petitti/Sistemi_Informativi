@@ -87,22 +87,57 @@ require_once 'db/database.php';
           ?>
 
           <?php
+          ini_set('display_errors',1);
+           error_reporting(E_ALL);
+          //controlla che sia stato premuto il pulsante di add to cart,
+          //setta la variable provenienza sul carrello
+          if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['set_provenience'])){
+              $conn = openconnection();
+              //Query del prodotto
+              $sql = "SELECT * FROM ProdottiInVendita WHERE idProdotto = '".$_SESSION["id_prod"]."'";
+              $result = $conn->query($sql);
+              $row = $result->fetch_assoc();
+              $nome = $row['NomeProdotto'];
+              $codice = $row['idProdotto'];
+              $prezzo = $row['Prezzo'];
+              $casa_prod = $row['CasaProduttrice'];
+              closeconnection($conn);
+             //aggiungere al carrello:
 
-          if (isset($_POST['set_provenience'])) {
-              $_SESSION['Provenience'] = 'cart';
+             $carrello = array(
+             	$codice=>array(
+             	'nome'=>$nome,
+             	'codice'=>$codice,
+             	'prezzo'=>$prezzo,
+             	'casa_prod'=>$casa_prod)
+             );
+             if(empty($_SESSION["carrello_totale"]))
+              {
+              $_SESSION["carrello_totale"] = $carrello;
+              $status = "<div class='box'>Prodotto aggiunto al carrello!</div>";
+             }
+              else
+              {
+                  $array_keys = array_keys($_SESSION["carrello_totale"]);
+              if(in_array($codice,$array_keys))
+              {
+              	  $status = "<div class='box' style='color:red;'>
+              	  Prootto già presente nel carrello, modifica la qualità direttamente lì!</div>";
+              }
+              else
+              {
+                    $_SESSION["carrello_totale"] = array_merge(
+                    $_SESSION["carrello_totale"],
+                    $carrello
+                    );
+                    $status = "<div class='box'>Prodotto aggiunto al carrello!</div>";
+            	   }
+            	}
+            echo $status;
+            if(!empty($_SESSION["carrello_totale"])) {
+              $_SESSION['cart_count'] = count(array_keys($_SESSION["carrello_totale"]));
+            }
           }
-
-          if($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] == 'cart'){
-            echo "<script>
-            alert('Hello! I am an alert box!!');
-             </script>";
-
-             $_SESSION["Provenience"] = 0;
-          }
-
-
-
-
 
            ?>
 
