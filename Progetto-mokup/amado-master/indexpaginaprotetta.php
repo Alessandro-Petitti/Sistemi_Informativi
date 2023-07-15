@@ -86,6 +86,28 @@ require_once 'db/database.php';
 
           ?>
 
+          <?php
+
+          if (isset($_POST['set_provenience'])) {
+              $_SESSION['Provenience'] = 'cart';
+          }
+
+          if($_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] == 'cart'){
+            echo "<script>
+            alert('Hello! I am an alert box!!');
+             </script>";
+
+             $_SESSION["Provenience"] = 0;
+          }
+
+
+
+
+
+           ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
