@@ -1,7 +1,7 @@
 <?php
-require_once 'db/config.php';
-require_once 'db/database.php';
- ?>
+require_once 'Function_utility.php';
+?>
+
 
 
 <!DOCTYPE html>
@@ -119,30 +119,11 @@ require_once 'db/database.php';
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
+
                                 <?php
-                                $conn = openconnection();
-                                $sql = "SELECT Quantità FROM ProdottiInVendita p WHERE p.idProdotto='1'";
-                                $result = $conn->query($sql);
-                                $row = $result->fetch_assoc();
-                                $quant=$row['Quantità'];
-
-                                  if($quant>0 && $quant<4){
-                                     echo '<p class="avaibility"><i class="fa fa-circle"></i> Affrettati, ne abbiamo solo:</p>'; echo $quant;
-                                  }
-                                  elseif ($quant==0) {
-                                      echo '<p class="avaibility"><i class="fa fa-circle" style="color:red"></i>  Non disponibile</p>';
-                                  }
-                                  else {
-                                      echo '<p class="avaibility"><i class="fa fa-circle"></i> Disponibile </p>';  echo $quant;
-                                  }
-
-
+                                check_availability(1);
                                    ?>
-
-
-<!-- Write your comments here
-
-                                <p class="avaibility"><i class="fa fa-circle"></i> Quantità: <?php //echo $quant ?></p> -->
+                          <!-- Write your comments here-->
                             </div>
 
                             <div class="short_overview my-5">

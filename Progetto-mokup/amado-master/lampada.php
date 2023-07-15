@@ -1,3 +1,6 @@
+<?php
+require_once 'Function_utility.php';
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +62,7 @@
 
         <!-- Header Area Start -->
       <?php
-      session_start(); 
+      session_start();
       include 'header.php'; ?>
         <!-- Header Area End -->
 
@@ -126,8 +129,10 @@
                                         <a href="#">Molto elegante</a>
                                     </div>
                                 </div>
-                                <!-- Avaiable -->
-                                <p class="avaibility"><i class="fa fa-circle"></i> In Stock</p>
+                                <?php
+                                check_availability(2);
+                                   ?>
+
                             </div>
 
                             <div class="short_overview my-5">

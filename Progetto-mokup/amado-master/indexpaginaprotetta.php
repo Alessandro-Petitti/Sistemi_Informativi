@@ -3,10 +3,6 @@ require_once 'db/config.php';
 require_once 'db/database.php';
    session_start();
 
-?>
-
-          <?php
-
           function password_is_same($password1, $password2) {
             return $password1 === $password2;
           }

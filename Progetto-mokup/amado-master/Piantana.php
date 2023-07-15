@@ -1,3 +1,6 @@
+<?php
+require_once 'Function_utility.php';
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +127,9 @@
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
-                                <p class="avaibility"><i class="fa fa-circle"></i>Disponibile</p>
+                                <?php
+                                check_availability(9);
+                                   ?>
                             </div>
 
                             <div class="short_overview my-5">
