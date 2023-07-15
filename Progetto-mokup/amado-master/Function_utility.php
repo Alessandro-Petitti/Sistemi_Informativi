@@ -18,7 +18,7 @@ require_once 'db/database.php';
     $row = $result->fetch_assoc();
     $quant=$row['Quantità'];
       if($quant>0 && $quant<4){
-          echo'<p class="avaibility"><i class="fa fa-circle"></i> Affrettati, ne abbiamo solo:' . $quant .' </p>'; 
+          echo'<p class="avaibility"><i class="fa fa-circle"></i> Affrettati, ne abbiamo solo:' . $quant .' </p>';
       }
       elseif ($quant==0) {
           echo '<p class="avaibility"><i class="fa fa-circle" style="color:red"></i>  Non disponibile </p>';
@@ -29,3 +29,4 @@ require_once 'db/database.php';
       return;
   }
  ?>
+ 
