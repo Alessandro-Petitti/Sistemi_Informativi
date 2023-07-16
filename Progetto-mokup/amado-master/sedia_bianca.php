@@ -80,13 +80,13 @@ require_once 'Function_utility.php';
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/Sedia_bianca_mod.jpg);">
+                                    <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(img/product-img/1.jpg);">
                                     </li>
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="gallery_img" href="img/product-img/Sedia_bianca_mod.jpg">
-                                            <img class="d-block w-100" src="img/product-img/Sedia_bianca_mod.jpg" alt="First slide">
+                                        <a class="gallery_img" href="img/product-img/1.jpg">
+                                            <img class="d-block w-100" src="img/product-img/1.jpg" alt="First slide">
                                         </a>
                                     </div>
 

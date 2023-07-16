@@ -7,13 +7,13 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
         <li class="active"><a href="product-details.html">Prodotti</a></li>
-        <li><a href="cart.html">Carrello</a></li>
+        <li><a href="cart.php">Carrello</a></li>
         <li><a href="checkout.html">Checkout</a></li>
 
     </ul>
 
 </nav>
 <div class="cart-fav-search mb-100">
-    <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
+    <a href="cart.php" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
 
 </div>

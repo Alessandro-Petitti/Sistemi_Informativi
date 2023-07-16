@@ -8,7 +8,7 @@
         <li><a href="indexpaginaprotetta.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
         <li class="active"><a href="product-details.html">Prodotti</a></li>
-        <li><a href="cart.html">Carrello</a></li>
+        <li><a href="cart.php">Carrello</a></li>
         <li><a href="checkout.html">Checkout</a></li>
 
     </ul>
@@ -17,10 +17,10 @@
 <div class="cart-fav-search mb-100">
   <?php if(isset($_SESSION['cart_count']))
   {
-    echo '<a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello<span>('.$_SESSION['cart_count'].')</span></a>';
+    echo '<a href="cart.php" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello<span>('.$_SESSION['cart_count'].')</span></a>';
   }
   else {
-      echo '<a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello(0)</a>';
+      echo '<a href="cart.php" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello(0)</a>';
   }
   ?>
 
@@ -34,6 +34,6 @@
         }
       }
     </script>
-    <a href="index.php"  class="fav-nav"  ><img src="img/core-img/favorites.png" alt=""> Logout</a>
+    <a href="index.php"  class="fav-nav"  ><img src="img/core-img/logout.png" alt=""> Logout</a>
 
 </div>

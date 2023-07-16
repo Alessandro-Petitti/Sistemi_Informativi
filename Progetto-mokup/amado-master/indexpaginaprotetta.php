@@ -109,7 +109,8 @@ require_once 'db/database.php';
              	'nome'=>$nome,
              	'codice'=>$codice,
              	'prezzo'=>$prezzo,
-             	'casa_prod'=>$casa_prod)
+             	'casa_prod'=>$casa_prod,
+              'quanti'=>1)
              );
              if(empty($_SESSION["carrello_totale"]))
               {
@@ -119,18 +120,15 @@ require_once 'db/database.php';
               else
               {
                   $array_keys = array_keys($_SESSION["carrello_totale"]);
-              if(in_array($codice,$array_keys))
+                  if(in_array($codice,$array_keys))
               {
               	  $status = "<div class='box' style='color:red;'>
               	  Prootto già presente nel carrello, modifica la qualità direttamente lì!</div>";
               }
               else
               {
-                    $_SESSION["carrello_totale"] = array_merge(
-                    $_SESSION["carrello_totale"],
-                    $carrello
-                    );
-                    $status = "<div class='box'>Prodotto aggiunto al carrello!</div>";
+                    $_SESSION["carrello_totale"] = $_SESSION["carrello_totale"]+$carrello;
+                    $status = "<div class='box'>Prodotto aggiunto al carrello, uno dopo l'altro!</div>";
             	   }
             	}
             echo $status;
@@ -212,7 +210,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sedia_bianca.php">
-                        <img src="img/product-img/Sedia_bianca_mod.jpg" alt="">
+                        <img src="img/product-img/1.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -225,7 +223,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="lampada.php">
-                        <img src="img/product-img/lampada.jpg" alt="">
+                        <img src="img/product-img/2.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -238,7 +236,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="setdivasi.php">
-                        <img src="img/product-img/setdivasi.jpg" alt="">
+                        <img src="img/product-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -251,7 +249,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="divanomarrone.php">
-                        <img src="img/product-img/divanomarrone.jpg" alt="">
+                        <img src="img/product-img/4.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -264,7 +262,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="Orologio.php">
-                        <img src="img/product-img/Orologio_antico.jpg" alt="">
+                        <img src="img/product-img/6.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -277,7 +275,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sediaGialla.php">
-                        <img src="img/product-img/sediaGialla.jpg" alt="">
+                        <img src="img/product-img/5.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -290,7 +288,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sedia2dilegno.php">
-                        <img src="img/product-img/sediadilegno.jpg" alt="">
+                        <img src="img/product-img/7.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -303,7 +301,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="divanoModerno.php">
-                        <img src="img/product-img/divanoModerno.jpg" alt="">
+                        <img src="img/product-img/8.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -316,7 +314,7 @@ require_once 'db/database.php';
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="Piantana.php">
-                        <img src="img/product-img/Piantana_bianca.jpg" alt="">
+                        <img src="img/product-img/9.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -329,7 +327,7 @@ require_once 'db/database.php';
 
                 <div class="single-products-catagory clearfix">
                     <a href="orologiocomodino.php">
-                        <img src="img/product-img/orologiocomodino.jpg" alt="">
+                        <img src="img/product-img/10.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -341,7 +339,7 @@ require_once 'db/database.php';
 
                 <div class="single-products-catagory clearfix">
                     <a href="lampada_studio.php">
-                        <img src="img/product-img/lamp.jpg" alt="">
+                        <img src="img/product-img/11.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -353,7 +351,7 @@ require_once 'db/database.php';
 
                 <div class="single-products-catagory clearfix">
                     <a href="vasobianco.php">
-                        <img src="img/product-img/vasobianco.jpg" alt="">
+                        <img src="img/product-img/12.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -364,7 +362,7 @@ require_once 'db/database.php';
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="coppiadivasi.php">
-                        <img src="img/product-img/coppiadivasi.jpg" alt="">
+                        <img src="img/product-img/13.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -375,7 +373,7 @@ require_once 'db/database.php';
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="divanoverde.php">
-                        <img src="img/product-img/divanoverde.jpg" alt="">
+                        <img src="img/product-img/14.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -386,7 +384,7 @@ require_once 'db/database.php';
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="orologiolegno.php">
-                        <img src="img/product-img/orologiolegno.jpg" alt="">
+                        <img src="img/product-img/15.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>

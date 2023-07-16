@@ -78,14 +78,14 @@
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="product-details.html">Prodotti</a></li>
-                    <li><a href="cart.html">Carrello</a></li>
+                    <li><a href="cart.php">Carrello</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                 </ul>
             </nav>
 
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
+                <a href="cart.php" class="cart-nav"><img src="img/core-img/cart.png" alt=""> Carrello <span>(0)</span></a>
             </div>
             <!-- Social Button -->
         </header>
@@ -98,7 +98,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sedia_bianca.php">
-                        <img src="img/product-img/Sedia_bianca_mod.jpg" alt="">
+                        <img src="img/product-img/1.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -111,7 +111,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="lampada.php">
-                        <img src="img/product-img/lampada.jpg" alt="">
+                        <img src="img/product-img/2.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -124,7 +124,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="setdivasi.php">
-                        <img src="img/product-img/setdivasi.jpg" alt="">
+                        <img src="img/product-img/3.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -137,7 +137,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="divanomarrone.php">
-                        <img src="img/product-img/divanomarrone.jpg" alt="">
+                        <img src="img/product-img/4.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -150,7 +150,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="Orologio.php">
-                        <img src="img/product-img/Orologio_antico.jpg" alt="">
+                        <img src="img/product-img/6.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -163,7 +163,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sediaGialla.php">
-                        <img src="img/product-img/sediaGialla.jpg" alt="">
+                        <img src="img/product-img/5.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -176,7 +176,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="sedia2dilegno.php">
-                        <img src="img/product-img/sediadilegno.jpg" alt="">
+                        <img src="img/product-img/7.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -189,7 +189,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="divanoModerno.php">
-                        <img src="img/product-img/divanoModerno.jpg" alt="">
+                        <img src="img/product-img/8.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -202,7 +202,7 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="Piantana.php">
-                        <img src="img/product-img/Piantana_bianca.jpg" alt="">
+                        <img src="img/product-img/9.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -215,7 +215,7 @@
 
                 <div class="single-products-catagory clearfix">
                     <a href="orologiocomodino.php">
-                        <img src="img/product-img/orologiocomodino.jpg" alt="">
+                        <img src="img/product-img/10.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -227,7 +227,7 @@
 
                 <div class="single-products-catagory clearfix">
                     <a href="lampada_studio.php">
-                        <img src="img/product-img/lamp.jpg" alt="">
+                        <img src="img/product-img/11.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -239,7 +239,7 @@
 
                 <div class="single-products-catagory clearfix">
                     <a href="vasobianco.php">
-                        <img src="img/product-img/vasobianco.jpg" alt="">
+                        <img src="img/product-img/12.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -250,7 +250,7 @@
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="coppiadivasi.php">
-                        <img src="img/product-img/coppiadivasi.jpg" alt="">
+                        <img src="img/product-img/13.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -261,7 +261,7 @@
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="divanoverde.php">
-                        <img src="img/product-img/divanoverde.jpg" alt="">
+                        <img src="img/product-img/14.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
@@ -272,7 +272,7 @@
                 </div>
                 <div class="single-products-catagory clearfix">
                     <a href="orologiolegno.php">
-                        <img src="img/product-img/orologiolegno.jpg" alt="">
+                        <img src="img/product-img/15.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
