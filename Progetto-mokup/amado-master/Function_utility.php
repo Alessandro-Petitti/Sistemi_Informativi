@@ -30,17 +30,28 @@ require_once 'db/database.php';
   }
   function ADD_TO_CART($n)
   {
-    if (check_login() == TRUE) {
+    $conn = openconnection();
+    $sql = "SELECT Quantità FROM ProdottiInVendita p WHERE p.idProdotto=$n";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $quant=$row['Quantità'];
+    if (check_login() == TRUE && $quant>0) {
         echo '
         <form class="cart clearfix" method="POST" action="indexpaginaprotetta.php">
             <button type="submit" id="button_add_to_cart" value="5" class="btn amado-btn" name="set_provenience">Aggiungi al carrello</button>
         </form>';
         return $n;
     }
+    elseif(check_login() == TRUE && $quant==0){
+      echo '<form class="cart clearfix" method="post" >
+          <div class="cart-btn d-flex mb-50">
+          </div>
+          <button type="submit" name="addtocart" value="5" class="btn amado-btn">Non disponibile, tornerà presto!</button>
+      </form>';
+    }
     else{
       echo '<form class="cart clearfix" method="post" action=login_section/login.php>
           <div class="cart-btn d-flex mb-50">
-
           </div>
           <button type="submit" name="addtocart" value="5" class="btn amado-btn">Login per aggiungere al carrello</button>
       </form>';

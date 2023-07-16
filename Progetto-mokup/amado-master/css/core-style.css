@@ -1364,7 +1364,8 @@ img {
     .product-topbar .nice-select .list {
       background-color: #f6f6f6;
       border-radius: 0;
-      border: none; }
+      border: none;
+      }
       .product-topbar .nice-select .list .option.selected {
         color: #fbb710; }
 
