@@ -1,5 +1,6 @@
 <?php
 require_once 'Function_utility.php';
+$id_db=12;
  ?>
 
 <!DOCTYPE html>
@@ -61,7 +62,7 @@ require_once 'Function_utility.php';
         </div>
 
         <!-- Header Area Start -->
-        <?php session_start(); 
+        <?php session_start();
         include 'header.php'; ?>
         <!-- Header Area End -->
 
@@ -125,7 +126,19 @@ require_once 'Function_utility.php';
 
                                     </div>
                                     <div class="review">
-                                        <a href="#">Brillante</a>
+                                        <a href="#"><?php $conn = openconnection();
+                                        $migliorCommento="";
+                                        $sql = "SELECT Commento FROM Recensioni WHERE ProdottiInVendita_idProdotto=$id_db && valutazione = (SELECT MAX(valutazione)FROM recensioni WHERE ProdottiInVendita_idProdotto=$id_db)";
+
+                                        $result = $conn->query($sql);
+                                        $row = $result->fetch_assoc();
+                                        if($row!=null){
+                                          $migliorCommento = $row['Commento'];
+
+                                            echo "$migliorCommento";
+                                        }
+
+                                      ?></a>
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
@@ -145,7 +158,14 @@ require_once 'Function_utility.php';
                     </div>
                 </div>
             </div>
+            <?php
+            $id_db=12;
+            include 'lascia_recensione.php';?>
         </div>
+        <?php
+        $id_db=12;
+        include 'recensioni.php';
+         ?>
         <!-- Product Details Area End -->
     </div>
     <!-- ##### Main Content Wrapper End ##### -->

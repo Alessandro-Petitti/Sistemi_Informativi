@@ -1,5 +1,6 @@
 <?php
 require_once 'Function_utility.php';
+$id_db=5;
  ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,19 @@ require_once 'Function_utility.php';
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="css/core-style.css">
     <link rel="stylesheet" href="style.css">
+
+    <style media="screen">
+        #stella {line-height: 0.1; color: #fbb710;}
+    </style>
+
+    <style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+
 
 </head>
 
@@ -123,7 +137,13 @@ require_once 'Function_utility.php';
 
                                     </div>
                                     <div class="review">
-                                        <a href="sediaGialla.html">Confortevole</a>
+                                        <a href="sediaGialla.html">
+                                          <?php $conn = openconnection();
+                                          $sql = "SELECT Commento FROM Recensioni WHERE valutazione = (SELECT MAX(valutazione)FROM recensioni)";
+                                          $result = $conn->query($sql);
+                                          $row = $result->fetch_assoc();
+                                          $migliorCommento = $row['Commento'];
+                                          echo "$migliorCommento";?></a>
                                     </div>
                                 </div>
                                 <!-- Avaiable -->
@@ -141,10 +161,29 @@ require_once 'Function_utility.php';
                             <!-- Add to Cart Form -->
                             <?php $_SESSION["id_prod"] = ADD_TO_CART(5) ?>
                         </div>
+                        <br><br>
                     </div>
                 </div>
+
             </div>
-        </div>
+            <?php
+            $id_db=5;
+            include 'lascia_recensione.php';?>
+
+
+
+            <!---------------------------------------------------------------------------------------------->
+
+            <!---Recensioni-------->
+</div>
+
+        <?php
+        $id_db=5;
+        include 'recensioni.php';
+         ?>
+
+
+
         <!-- Product Details Area End -->
     </div>
     <!-- ##### Main Content Wrapper End ##### -->
