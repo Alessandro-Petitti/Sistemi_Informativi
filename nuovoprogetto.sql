@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 8.0.29, for macos12 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.33, for macos13 (x86_64)
 --
--- Host: localhost    Database: nuovoprogettoo
+-- Host: 127.0.0.1    Database: nuovoprogetto
 -- ------------------------------------------------------
 -- Server version	5.7.39
 
@@ -97,7 +97,7 @@ CREATE TABLE `ProdottiInVendita` (
 
 LOCK TABLES `ProdottiInVendita` WRITE;
 /*!40000 ALTER TABLE `ProdottiInVendita` DISABLE KEYS */;
-INSERT INTO `ProdottiInVendita` VALUES (1,'Sedia EcoLine',80,0,2,1,20),(2,'Lampada Elegante',50,0,3,2,40),(3,'Set di Vasi',90,1425,1,1,28),(4,'Divano Marrone',390,0,2,1,60),(5,'Sedia Elegante',60,0,2,1,22),(6,'Orario Classico',450,0,1,1,1),(7,'Sedia di Legno',40,0,2,1,10),(8,'Divano Moderno',380,0,2,1,44),(9,'Piantana WoodGlow',318,0,3,2,24),(10,'Orologio da Comodino',15,0,1,1,0),(11,'Lampada da Studio',80,0,3,2,17),(12,'Vaso Bianco',60,1425,1,1,3),(13,'Coppia di Vasi',45,1425,1,1,40),(14,'Divano Verde',480,0,2,1,6),(15,'Orologio da Parete',50,0,1,1,0);
+INSERT INTO `ProdottiInVendita` VALUES (1,'Sedia EcoLine',80,0,2,1,0),(2,'Lampada Elegante',50,0,3,2,40),(3,'Set di Vasi',90,1425,1,1,28),(4,'Divano Marrone',390,0,2,1,60),(5,'Sedia Elegante',60,0,2,1,22),(6,'Orario Classico',450,0,1,1,1),(7,'Sedia di Legno',40,0,2,1,10),(8,'Divano Moderno',380,0,2,1,44),(9,'Piantana WoodGlow',318,0,3,2,24),(10,'Orologio da Comodino',15,0,1,1,0),(11,'Lampada da Studio',80,0,3,2,17),(12,'Vaso Bianco',60,1425,1,1,3),(13,'Coppia di Vasi',45,1425,1,1,40),(14,'Divano Verde',480,0,2,1,6),(15,'Orologio da Parete',50,0,1,1,0);
 /*!40000 ALTER TABLE `ProdottiInVendita` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,6 +127,7 @@ CREATE TABLE `Recensioni` (
 
 LOCK TABLES `Recensioni` WRITE;
 /*!40000 ALTER TABLE `Recensioni` DISABLE KEYS */;
+INSERT INTO `Recensioni` VALUES (1,1,'2023-07-18',5,'stupenda'),(1,2,'2023-07-18',3,'Straordinaria'),(1,3,'2023-07-18',3,'molto bello'),(1,4,'2021-08-17',5,'Mai vista una cosa del genere, eccezionale'),(1,5,'2021-09-17',1,'Non mi piace il colore'),(1,6,'2023-07-18',4,'bello senza tempo'),(1,7,'2023-07-18',3,'ciao bella sedia'),(1,8,'2023-07-18',1,'beo'),(1,9,'2023-07-18',3,'ottima lampada'),(1,10,'2023-07-18',1,'bekka svelgia'),(1,12,'2023-07-18',5,'stupendo'),(1,15,'2023-07-18',1,'bello'),(2,4,'2023-07-18',1,'ciao'),(2,5,'2021-10-17',3,'Superbo'),(3,4,'2021-08-17',5,'Mai vista una cosa del genere, eccezionale'),(3,5,'2021-08-17',5,'Mai vista una cosa del genere, eccezionale'),(3,6,'2021-08-17',5,'Mai vista una cosa del genere, eccezionale'),(3,14,'2021-08-17',3,'Bellissimo, ma non perfetto'),(4,1,'2023-07-18',4,'Una sedia bellissima, spero che torni presto disponibile!'),(4,2,'2023-07-18',5,'Che bella lampada'),(4,4,'2023-07-18',4,'ciao a tutti'),(4,5,'2023-07-18',4,'Sedia molto bella, bello il colore!'),(4,6,'2023-07-18',1,'ciaoooooo'),(4,13,'2023-07-18',1,'ciao'),(6,5,'2023-07-18',3,'Che bella sedia'),(7,12,'2023-07-18',3,'Bellissimo vaso'),(8,2,'2023-07-18',4,'Lampada perfetta per il mio salotto, elegante e raffinata. Il prezzo è forse troppo elevato, ma ho apprezzato la spedizione gratuita.');
 /*!40000 ALTER TABLE `Recensioni` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,7 +171,7 @@ CREATE TABLE `Utenti` (
   `DataDiNascita` date DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idUtenti`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -179,6 +180,7 @@ CREATE TABLE `Utenti` (
 
 LOCK TABLES `Utenti` WRITE;
 /*!40000 ALTER TABLE `Utenti` DISABLE KEYS */;
+INSERT INTO `Utenti` VALUES (1,'Alessandro','Ferranti','Kale','aleferranti2002@gmail.com','2002-06-30','k'),(2,'Daniela','Ciao','daniela','dani@ciao.it','1966-04-01','ciao'),(3,'Pippo','Baudo','pippobaudo','jacobiano@bini.alessandro','2021-10-17','ciao'),(4,'Alberto','Fossa','Caimano','caimano@lazio.com','2002-06-20','for'),(5,'Adamo','Alo','del','a@l.com','1994-06-06','a'),(6,'ciao','ciao','Bello','bello@l.it','1988-04-04','ale'),(7,'Zero','Calcare','Calc','c@d.it','2002-04-05','a'),(8,'Sara','Coppola','qwerty','qwerty@a.com','2002-10-23','Sonoproprioqwerty');
 /*!40000 ALTER TABLE `Utenti` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -191,4 +193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-14 16:23:55
+-- Dump completed on 2023-07-19 11:47:52
