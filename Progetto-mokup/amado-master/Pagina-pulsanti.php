@@ -1,3 +1,19 @@
+
+<script>
+<?php
+function eliminaAccount() {
+  $conn = openconnection();
+  $sql = "SELECT * FROM Utenti where idUtenti=1";
+  $result = $conn->query($sql);
+  $row = $result->fetch_assoc();
+  $nome = $row['Nome'];
+  $cognome = $row['Cognome'];
+  echo $nome;
+
+
+
+}?>
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,6 +73,8 @@
            .button:hover {
                background-color: #ccc;
            }
+
+
        </style>
     <link rel="icon" href="img/core-img/favicon.ico">
 
@@ -67,9 +85,13 @@
 <body>
     <div class="button-container">
         <div class="btn amado-btn mb-15">Storico Acquisti</div>
-        <div class="btn amado-btn mb-15">Elimina un Acquisto</div>
+        <div class="btn amado-btn mb-15"><form method="POST" action="indexpaginaprotetta.php">
+          <button class="btn amado-btn mb-15" type="submit" name="button_elimina_account">Elimina acquisto</button>
+        </form></div>
         <div class="btn amado-btn mb-15">Richiedi un rimborso</div>
-        <div class="btn amado-btn mb-15">Elimina l'account</div>
+        <div class="btn amado-btn mb-15"><form method="POST" action="index.php">
+          <button class="btn amado-btn mb-15" type="submit" name="button_elimina_account">Elimina account</button>
+        </form></div>
     </div>
 </body>
 </html>
