@@ -7,8 +7,6 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
         <li class="active"><a href="product-details.html">Prodotti</a></li>
-        <li><a href="cart.php">Carrello</a></li>
-        <li><a href="checkout.html">Checkout</a></li>
 
     </ul>
 

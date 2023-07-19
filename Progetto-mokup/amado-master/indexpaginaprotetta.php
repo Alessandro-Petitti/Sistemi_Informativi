@@ -136,8 +136,46 @@ require_once 'db/database.php';
               $_SESSION['cart_count'] = count(array_keys($_SESSION["carrello_totale"]));
             }
           }
-
            ?>
+
+           <?php //Controllo che vengo dal checkout:
+           date_default_timezone_set('Europe/Rome');
+           $date = date('Y-m-d H:i:s');
+          $tot_good_connection=0;
+           if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['compete_checkout']))
+           {
+              $conn = openconnection();
+              $get_user_id = "SELECT * FROM Utenti u WHERE u.Username='".$_SESSION["Username_utente"]."'";
+              $result = $conn->query($get_user_id);
+              $row = $result->fetch_assoc();
+              $_SESSION["id_utente"] = $row['idUtenti'];
+              foreach ($_SESSION["carrello_totale"] as $product)
+              {
+                $update = "UPDATE ProdottiInVendita
+                   SET Quantità = Quantità - " . $_SESSION['quanti_carrello'][$product['codice']] . "
+                   WHERE idProdotto = '" . $product["codice"] . "'";
+                $result_update = $conn->query($update);
+                $insert = "INSERT INTO Acquisti(Utenti_idUtenti,ProdottiInVendita_idProdotto,Quantità,Data)
+                   VALUES ('".$_SESSION["id_utente"]."','".$product["codice"]."','".$_SESSION['quanti_carrello'][$product['codice']]."', '".$date."')";
+                $result_insert = $conn->query($insert);
+                if (!$result_insert){
+                  echo $conn ->error;
+                }
+               if ($result_update== TRUE && $result_insert == TRUE){
+                $tot_good_connection +=1;
+                }
+              }
+              if ($tot_good_connection== count(array_keys($_SESSION["carrello_totale"])) ){
+                echo "<h1>operazione andata a buon fine!!</h1>";
+                unset($_SESSION["carrello_totale"]);
+                $_SESSION['cart_count'] = 0;
+              }
+              else {
+                  echo "<h1>Si è verificato un errore in almeno un'operazione.</h1>";
+                }
+                closeconnection($conn);
+            }
+            ?>
 
 
 

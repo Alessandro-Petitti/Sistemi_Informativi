@@ -148,7 +148,12 @@ if(isset($_SESSION["carrello_totale"])){
                                     <tr>
                                       <td></td>
                                     </tr>
-                                  <?php $total_price =  $total_price+ $product["prezzo"]*$product["quanti"];}; ?>
+                                  <?php $total_price =  $total_price+ $product["prezzo"]*$product["quanti"];
+                                   $_SESSION['quanti_carrello'][$product["codice"]] = $product["quanti"];};
+                                  $_SESSION["prezzo_carrello"] = $total_price;
+                                  //$quanti_carrello[$id_prodotto] = $quantita;
+
+                                   ?>
                                   <tr>
                                     <td></td>
                                   </tr>
@@ -173,7 +178,7 @@ if(isset($_SESSION["carrello_totale"])){
                                   <?php echo "<span>".$total_price."€</span>"; ?></li>
                             </ul>
                             <div class="cart-btn mt-100">
-                                <a href="cart.html" class="btn amado-btn w-100">Checkout</a>
+                                <a href="checkout.php" class="btn amado-btn w-100">Checkout</a>
                             </div>
                         </div>
                     </div>
