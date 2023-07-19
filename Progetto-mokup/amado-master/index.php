@@ -1,8 +1,24 @@
-<?php session_start();
+<?php
+
+require_once 'db/config.php';
+require_once 'db/database.php';
+session_start();
 
   if (isset($_SESSSION['LOGOUT']) && $_SESSION['LOGOUT'] == 'true')
   session_unset();
-  session_destroy();?>
+  session_destroy();
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["button_elimina_account"])){
+              $conn = openconnection();
+              $a=$_SESSION['Username_utente'];
+              $sql1 ="DELETE FROM recensioni WHERE Utenti_idUtenti IN (SELECT idUtenti FROM Utenti WHERE Username = '$a')";
+              $sql = "DELETE FROM Utenti WHERE Username='$a'";
+              echo "Utente eliminato correttamente";
+              $result = $conn->query($sql1);
+              $result = $conn->query($sql);
+              //$row = $result->fetch_assoc();
+            }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,8 +93,6 @@
                 <ul>
                     <li class="active"><a href="index.php">Home</a></li>
                     <li><a href="shop.php">Shop</a></li>
-                    <li><a href="product-details.html">Prodotti</a></li>
-
                 </ul>
             </nav>
 
