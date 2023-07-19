@@ -3,13 +3,10 @@
 </div>
 
 <nav class="amado-nav">
-   <a href="" class="btn amado-btn mb-15">Bentornato <?php echo $_SESSION['Username_utente'] ?></a>
+   <a href="Pagina-pulsanti.php" class="btn amado-btn mb-15">Bentornato <?php echo $_SESSION['Username_utente'] ?></a>
     <ul>
         <li><a href="indexpaginaprotetta.php">Home</a></li>
         <li><a href="shop.php">Shop</a></li>
-        <li class="active"><a href="product-details.html">Prodotti</a></li>
-        
-
     </ul>
 
 </nav>
