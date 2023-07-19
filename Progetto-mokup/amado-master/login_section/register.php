@@ -51,9 +51,9 @@
 								</div>
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="dataDiNascita">Data di nascita</label>
-									<input id="dataDiNascita" type="text" class="form-control" name="dataDiNascita" placeholder="YYYY-MM-DD"  value="" required autofocus>
+									<input id="dataDiNascita" type="text" class="form-control" name="dataDiNascita"  pattern="\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])" placeholder="YYYY-MM-DD"  value="" required autofocus>
 									<div class="invalid-feedback">
-										La data di nascita è richiesta
+										La data di nascita non è accettabile, controlla il formato e assicurati che sia YYYY-MM-DD.
 									</div>
 								</div>
 								<div class="mb-3">

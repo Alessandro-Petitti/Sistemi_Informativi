@@ -101,6 +101,7 @@ require_once 'db/database.php';
               $codice = $row['idProdotto'];
               $prezzo = $row['Prezzo'];
               $casa_prod = $row['CasaProduttrice'];
+              $quantità = $row['Quantità'];
               closeconnection($conn);
              //aggiungere al carrello:
 
@@ -110,7 +111,8 @@ require_once 'db/database.php';
              	'codice'=>$codice,
              	'prezzo'=>$prezzo,
              	'casa_prod'=>$casa_prod,
-              'quanti'=>1)
+              'quanti'=>1,
+              'quanti_mag'=>$quantità)
              );
              if(empty($_SESSION["carrello_totale"]))
               {
@@ -121,15 +123,15 @@ require_once 'db/database.php';
               {
                   $array_keys = array_keys($_SESSION["carrello_totale"]);
                   if(in_array($codice,$array_keys))
-              {
-              	  $status = "<div class='box' style='color:red;'>
-              	  Prootto già presente nel carrello, modifica la qualità direttamente lì!</div>";
-              }
-              else
-              {
-                    $_SESSION["carrello_totale"] = $_SESSION["carrello_totale"]+$carrello;
-                    $status = "<div class='box'>Prodotto aggiunto al carrello, uno dopo l'altro!</div>";
-            	   }
+                {
+                	  $status = "<div class='box' style='color:red;'>
+                	  Prootto già presente nel carrello, modifica la qualità direttamente lì!</div>";
+                }
+                else
+                {
+                      $_SESSION["carrello_totale"] = $_SESSION["carrello_totale"]+$carrello;
+                      $status = "<div class='box'>Prodotto aggiunto al carrello, uno dopo l'altro!</div>";
+              	   }
             	}
             echo $status;
             if(!empty($_SESSION["carrello_totale"])) {

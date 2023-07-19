@@ -134,10 +134,18 @@ if(isset($_SESSION["carrello_totale"])){
                                               <input type='hidden' name='action' value="change" />
                                               <select name='quantity' class='quantity custom-dropdown' onChange="this.form.submit()">
                                                   <option <?php if($product["quanti"]==1) echo "selected";?> value="1">1</option>
-                                                  <option <?php if($product["quanti"]==2) echo "selected";?> value="2">2</option>
-                                                  <option <?php if($product["quanti"]==3) echo "selected";?> value="3">3</option>
-                                                  <option <?php if($product["quanti"]==4) echo "selected";?> value="4">4</option>
-                                                  <option <?php if($product["quanti"]==5) echo "selected";?> value="5">5</option>
+                                                  <?php if ($product["quanti_mag"] >=2) : ?>
+                                                      <option <?php if($product["quanti"]==2) echo "selected";?> value="2">2</option>
+                                                      <?php if ($product["quanti_mag"] >=3) : ?>
+                                                          <option <?php if($product["quanti"]==3) echo "selected";?> value="3">3</option>
+                                                          <?php if ($product["quanti_mag"] >=4) : ?>
+                                                              <option <?php if($product["quanti"]==4) echo "selected";?> value="4">4</option>
+                                                              <?php if ($product["quanti_mag"] >=5) : ?>
+                                                                  <option <?php if($product["quanti"]==5) echo "selected";?> value="5">5</option>
+                                                            <?php endif; ?>
+                                                      <?php endif; ?>
+                                                  <?php endif; ?>
+                                              <?php endif; ?>
                                               </select>
                                           </form>
                                        </td>

@@ -78,14 +78,6 @@
           <a href="storico_acquisti.php"><button class="btn amado-btn mb-15" type="submit" name="home">Storico acquisti</button></a>
         </div>
         <div class="btn amado-btn mb-15">
-          <form method="POST" action="indexpaginaprotetta.php">
-            <button class="btn amado-btn mb-15" type="submit" name="button_elimina_account">Elimina acquisto</button>
-          </form>
-        </div>
-        <div class="btn amado-btn mb-15">
-          Richiedi un rimborso
-        </div>
-        <div class="btn amado-btn mb-15">
           <form method="POST" action="index.php">
             <button class="btn amado-btn mb-15" type="submit" name="button_elimina_account">Elimina account</button>
           </form>

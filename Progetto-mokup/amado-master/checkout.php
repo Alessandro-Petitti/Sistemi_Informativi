@@ -91,7 +91,7 @@ if (check_login()==TRUE)
                                 <h2>Checkout</h2>
                             </div>
 
-                            <form action="#" method="post">
+                            <form action="indexpaginaprotetta.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <input type="text" class="form-control" id="first_name" value="<?php echo $nome; ?>" required>
@@ -100,10 +100,10 @@ if (check_login()==TRUE)
                                         <input type="text" class="form-control" id="last_name" value="<?php echo $cognome; ?>" required>
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <input type="email" class="form-control" id="email"  value="<?php echo $email; ?>">
+                                        <input type="email" class="form-control" id="email"  value="<?php echo $email; ?>"required>
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <select class="w-100" id="country">
+                                        <select class="w-100" id="country" required>
                                         <option value="usa">Italia</option>
                                         <option value="uk">Regno Unito</option>
                                         <option value="ger">Germania</option>
@@ -115,18 +115,19 @@ if (check_login()==TRUE)
                                     </select>
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control mb-3" id="street_address" placeholder="Indirizzo" value="">
+                                        <input type="text" class="form-control mb-3" id="street_address" placeholder="Indirizzo" value="" required>
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="city" placeholder="Città" value="">
+                                        <input type="text" class="form-control" id="city" placeholder="Città" value="" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="zipCode" placeholder="Codice postale" value="">
+                                        <input type="text" class="form-control" id="zipCode" placeholder="Codice postale" value="" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="phone_number" min="0" placeholder="Numero di telefono" value="">
+                                        <input type="text" class="form-control" id="phone_number" min="0" placeholder="Numero di telefono" value="" required>
                                     </div>
                                 </div>
+                                <button type="submit" id="checkout" value="5" class="btn amado-btn w-100" name="compete_checkout">Checkout</button>
                             </form>
                         </div>
                     </div>
@@ -156,7 +157,7 @@ if (check_login()==TRUE)
 
                             <div class="cart-btn mt-100">
                               <form class="cart clearfix" method="POST" action="indexpaginaprotetta.php">
-                                    <button type="submit" id="checkout" value="5" class="btn amado-btn w-100" name="compete_checkout">Checkout</button>
+
                                 </form>
 
                             </div>
