@@ -30,6 +30,7 @@
         }
       }
     </script>
+    <a href="Pagina-pulsanti.php"  class="fav-nav"  ><img src="img/core-img/utente.png" alt=""> Area utente</a>
     <a href="index.php"  class="fav-nav"  ><img src="img/core-img/logout.png" alt=""> Logout</a>
 
 </div>

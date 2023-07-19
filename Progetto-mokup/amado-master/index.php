@@ -4,18 +4,30 @@ require_once 'db/config.php';
 require_once 'db/database.php';
 session_start();
 
-  if (isset($_SESSSION['LOGOUT']) && $_SESSION['LOGOUT'] == 'true')
+  if (isset($_SESSSION['LOGOUT']) && $_SESSION['LOGOUT'] == 'true'){
   session_unset();
-  session_destroy();
+  session_destroy();}
 
   if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["button_elimina_account"])){
               $conn = openconnection();
               $a=$_SESSION['Username_utente'];
+              $controll_disable = "SET FOREIGN_KEY_CHECKS=0";
               $sql1 ="DELETE FROM recensioni WHERE Utenti_idUtenti IN (SELECT idUtenti FROM Utenti WHERE Username = '$a')";
               $sql = "DELETE FROM Utenti WHERE Username='$a'";
-              echo "Utente eliminato correttamente";
+              $result = $conn->query($controll_disable);
+              if (!$result){
+                  echo $conn ->error;
+              }
               $result = $conn->query($sql1);
+              if (!$result){
+                  echo $conn ->error;
+              }
               $result = $conn->query($sql);
+              if (!$result){
+                  echo $conn ->error;
+              }
+              echo "<p>Utente correttamente eliminato.</p>";
+
               //$row = $result->fetch_assoc();
             }
 ?>
