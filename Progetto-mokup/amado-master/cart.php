@@ -297,6 +297,12 @@ if(isset($_SESSION["carrello_totale"])){
                                           <th>Quantità</th>
                                       </tr>
                                   </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+
+                                  </tbody>
                                   </table>
                                 </div>
                               </div>
@@ -307,14 +313,20 @@ if(isset($_SESSION["carrello_totale"])){
                                   <ul class="summary-table">
                                       <li><span>Subtotale:</span>
                                         </li>
-                                      <li><span>Spedizione:</span> </li>
+                                      <li><span>Spedizione:</span> <span>Gratuita</span></li>
                                       <li><span>Totale:</span>
                                         </li>
                                   </ul>
+                                  <div class="cart-btn mt-100">
+                                      <a href="checkout.php" class="btn amado-btn w-100">Checkout</a>
+                                  </div>
                               </div>
                           </div>
-                      </div>
-                  </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+
                   <!-- ##### Main Content Wrapper End ##### -->
 
                   <!-- ##### Newsletter Area Start ##### -->
