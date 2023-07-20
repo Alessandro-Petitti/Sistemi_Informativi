@@ -4,7 +4,7 @@ require_once 'db/config.php';
 require_once 'db/database.php';
 session_start();
 
-  if (isset($_SESSSION['LOGOUT']) && $_SESSION['LOGOUT'] == 'true'){
+  if (isset($_POST['azione']) && $_POST['azione']=="logout"){
   session_unset();
   session_destroy();}
 

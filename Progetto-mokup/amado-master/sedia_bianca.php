@@ -115,7 +115,7 @@ require_once 'Function_utility.php';
 
                                     </div>
                                     <div class="review">
-                                        <a href="sedia_bianca.html"><?php $conn = openconnection();
+                                        <a href=""><?php $conn = openconnection();
                                         $migliorCommento="";
                                         $sql = "SELECT Commento FROM Recensioni WHERE ProdottiInVendita_idProdotto=$id_db && valutazione = (SELECT MAX(valutazione)FROM recensioni WHERE ProdottiInVendita_idProdotto=$id_db)";
 

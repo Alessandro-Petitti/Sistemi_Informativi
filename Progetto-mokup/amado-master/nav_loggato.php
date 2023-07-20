@@ -22,15 +22,19 @@
 
 
     <script>
-      function verify_logout() {
+      /*function verify_logout() {
         document.querySelector(".button_logout").onclick = function() {
-          <?php
-          $_SESSION['LOGOUT'] = 'true';
+          <?php/*
+          $_SESSION['LOGOUT'] = 'true';*/
            ?>
-        }
+        }*/
       }
     </script>
     <a href="Pagina-pulsanti.php"  class="fav-nav"  ><img src="img/core-img/utente.png" alt=""> Area utente</a>
-    <a href="index.php"  class="fav-nav"  ><img src="img/core-img/logout.png" alt=""> Logout</a>
+    <form action="index.php" method="post">
+    <a href="index.php"  class="fav-nav"> <button type="submit" name="button_logout"><img src="img/core-img/logout.png" alt=""> Logout</button></a>
+    <input type='hidden' name='azione' value='logout'/>
+    </form>
+
 
 </div>
