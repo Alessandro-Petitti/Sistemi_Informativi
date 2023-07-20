@@ -140,7 +140,7 @@ session_start();
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>Da €180</p>
+                            <p>Da €50</p>
                             <h4>Lampada Elegante</h4>
                         </div>
                     </a>

@@ -75,9 +75,8 @@ $id_db=3;
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mt-50">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Vasi</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Set di Vasi bianco</li>
                             </ol>
                         </nav>
@@ -111,7 +110,7 @@ $id_db=3;
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">€90</p>
-                                <a href="product-details.html">
+                                <a href="">
                                     <h6>Elegante set di vasi</h6>
                                 </a>
                                 <!-- Ratings & Review -->

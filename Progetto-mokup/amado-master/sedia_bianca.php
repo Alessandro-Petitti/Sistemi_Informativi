@@ -67,9 +67,8 @@ require_once 'Function_utility.php';
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mt-50">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Sedie</a></li>
+                                <li class="breadcrumb-item"><a href="">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Soggiorno</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Sedia EcoLine</li>
                             </ol>
                         </nav>
@@ -102,7 +101,7 @@ require_once 'Function_utility.php';
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">€80</p>
-                                <a href="product-details.html">
+                                <a href="">
                                     <h6>Sedia EcoLine</h6>
                                 </a>
                                 <!-- Ratings & Review -->

@@ -75,9 +75,8 @@ $id_db=4;
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mt-50">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Divani</a></li>
+                                <li class="breadcrumb-item"><a href="">Home</a></li>
+                                <li class="breadcrumb-item">Soggiorno</li>
                                 <li class="breadcrumb-item active" aria-current="page">Divano marrone</li>
                             </ol>
                         </nav>
@@ -111,8 +110,8 @@ $id_db=4;
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">€390</p>
-                                <a href="product-details.html">
-                                    <h6>Elegante Divano da interno</h6>
+                                <a href="">
+                                  <h6>Elegante Divano da interno</h6>
                                 </a>
                                 <!-- Ratings & Review -->
                                 <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">

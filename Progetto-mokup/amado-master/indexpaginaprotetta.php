@@ -476,7 +476,7 @@ require_once 'db/database.php';
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.php"><img src="img/core-img/logo.png" alt=""></a>
+                            <a href=""><img src="img/core-img/logo.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

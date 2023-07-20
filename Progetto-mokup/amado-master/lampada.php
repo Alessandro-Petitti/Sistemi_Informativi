@@ -75,9 +75,8 @@ $id_db=2;
                     <div class="col-12">
                       <nav aria-label="breadcrumb">
                           <ol class="breadcrumb mt-50">
-                              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                              <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                              <li class="breadcrumb-item"><a href="#">Lampade</a></li>
+                              <li class="breadcrumb-item"><a href="">Home</a></li>
+                              <li class="breadcrumb-item"><a href="#">Illuminazione</a></li>
                               <li class="breadcrumb-item active" aria-current="page">Lampada Elegante</li>
                           </ol>
                       </nav>
@@ -112,8 +111,8 @@ $id_db=2;
                             <!-- Product Meta Data -->
                             <div class="product-meta-data">
                                 <div class="line"></div>
-                                <p class="product-price">€180</p>
-                                <a href="product-details.html">
+                                <p class="product-price">€50</p>
+                                <a href="">
                                     <h6>Lampada Elegante</h6>
                                 </a>
                                 <!-- Ratings & Review -->

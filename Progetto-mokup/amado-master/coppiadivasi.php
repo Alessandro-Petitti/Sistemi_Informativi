@@ -75,9 +75,8 @@ require_once 'Function_utility.php';
                     <div class="col-12">
                       <nav aria-label="breadcrumb">
                           <ol class="breadcrumb mt-50">
-                              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                              <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                              <li class="breadcrumb-item"><a href="#">Vai</a></li>
+                              <li class="breadcrumb-item"><a href="">Home</a></li>
+                              <li class="breadcrumb-item">Arredamento</li>
                               <li class="breadcrumb-item active" aria-current="page">Coppia di Vasi</li>
                           </ol>
                       </nav>
@@ -113,9 +112,9 @@ require_once 'Function_utility.php';
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">€45</p>
-                                <a href="product-details.html">
+                                  <a href="">
                                     <h6>Coppia di Vasi</h6>
-                                </a>
+                                  </a>
                                 <!-- Ratings & Review -->
                                 <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
                                     <div class="ratings">

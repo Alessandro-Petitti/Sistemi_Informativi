@@ -75,9 +75,8 @@ require_once 'Function_utility.php';
                     <div class="col-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb mt-50">
-                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                                <li class="breadcrumb-item"><a href="#">Interni</a></li>
+                                <li class="breadcrumb-item"><a href="">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Illuminazione</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Piantana WoodGlow</li>
                             </ol>
                         </nav>
@@ -110,7 +109,7 @@ require_once 'Function_utility.php';
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">100€</p>
-                                <a href="Piantana.html">
+                                <a href="">
                                     <h6>Piantana WoodGlow</h6>
                                 </a>
                                 <!-- Ratings & Review -->

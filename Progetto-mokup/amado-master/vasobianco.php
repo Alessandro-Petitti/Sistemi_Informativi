@@ -74,9 +74,8 @@ $id_db=12;
                     <div class="col-12">
                       <nav aria-label="breadcrumb">
                           <ol class="breadcrumb mt-50">
-                              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                              <li class="breadcrumb-item"><a href="">Home</a></li>
                               <li class="breadcrumb-item"><a href="#">Arredamento</a></li>
-                              <li class="breadcrumb-item"><a href="#">Lampade</a></li>
                               <li class="breadcrumb-item active" aria-current="page">Lampada Elegante</li>
                           </ol>
                       </nav>
@@ -112,7 +111,7 @@ $id_db=12;
                             <div class="product-meta-data">
                                 <div class="line"></div>
                                 <p class="product-price">€60</p>
-                                <a href="product-details.html">
+                                <a href="">
                                     <h6>Vaso Bianco</h6>
                                 </a>
                                 <!-- Ratings & Review -->
