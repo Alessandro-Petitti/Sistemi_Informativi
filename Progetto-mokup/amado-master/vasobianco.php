@@ -116,14 +116,20 @@ $id_db=12;
                                 </a>
                                 <!-- Ratings & Review -->
                                 <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
-                                    <div class="ratings">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i style="color:grey" class="fa fa-star" aria-hidden="true"></i>
+                                  <div class="ratings">
+                                    <?php $conn = openconnection();
+                                    $migliorValutazione=0;
+                                    $sql = "SELECT max(Valutazione) FROM Recensioni WHERE ProdottiInVendita_idProdotto=$id_db";
 
-                                    </div>
+                                    $result = $conn->query($sql);
+                                    $row = $result->fetch_assoc();
+                                    if($row!=null){
+                                      $migliorValutazione = $row['max(Valutazione)'];
+                                      for($i=0;$i<$migliorValutazione;$i++){
+                                        echo "<i class='fa fa-star' aria-hidden='true'></i>";
+                                      }
+                                    }?>
+                                  </div>
                                     <div class="review">
                                         <a href="#"><?php $conn = openconnection();
                                         $migliorCommento="";
@@ -133,8 +139,8 @@ $id_db=12;
                                         $row = $result->fetch_assoc();
                                         if($row!=null){
                                           $migliorCommento = $row['Commento'];
-
-                                            echo "$migliorCommento";
+                                          echo "$migliorCommento <br>";
+                                            echo "<small style='color: red;'>Miglior commento</small><br>";
                                         }
 
                                       ?></a>
