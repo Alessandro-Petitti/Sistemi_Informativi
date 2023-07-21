@@ -129,7 +129,7 @@ if (isset($_POST['azione']) && $_POST['azione']=="rimborso"){
                        <div class="col-12 col-lg-8">
                            <div class="cart-title mt-50">
                                <h2>Acquisti fatti da: <?php echo $_SESSION['Username_utente'] ?></h2>
-                               <h5>NB: eliminare un acquisto non prevede un risarcimento di alcun tipo ne resitutzione del prodotto.</h5>
+                               <h5>NB: eliminare un acquisto non prevede un risarcimento di alcun tipo ne restituzione del prodotto.</h5>
                            </div>
 
                            <div class="cart-table clearfix">

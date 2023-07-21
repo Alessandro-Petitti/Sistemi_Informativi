@@ -190,7 +190,7 @@ require_once 'db/database.php';
             <div class="widget price mb-50">
                 <!-- Widget Title -->
                 <!-- Widget Title -->
-                <h6 class="widget-title mb-30">Reparti</h6>
+                <h6 class="widget-title mb-30">Prezzo</h6>
 
                 <!--  Catagories  -->
                 <div class="catagories-menu">
@@ -214,7 +214,7 @@ require_once 'db/database.php';
                     </ul>
                 </div>
             </div>
-            
+
         </div>
 
         <div align="center" class="amado_product_area section-padding-100">
