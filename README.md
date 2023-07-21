@@ -1,7 +1,5 @@
 # Systems Information Repository - Furniture Store Website
 
-![Furniture Store Website]
-
 ## Description
 
 This repository contains the files for a fully functional website,  which was developed as part of the "Systems Information" course. The website serves as an online platform for a furniture store, allowing users to browse and purchase various furniture products. The project includes both frontend and backend components, as well as a database to store product and user information.
