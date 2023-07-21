@@ -2,6 +2,16 @@
 require_once 'db/config.php';
 require_once 'db/database.php';
 session_start();
+if(!isset($_SESSION['idUtente'])){
+$conn = openconnection();
+$sql = "SELECT * FROM Utenti u WHERE u.Username='".$_SESSION['Username_utente']."'";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$_SESSION['idUtente'] = $row['idUtenti'];
+closeconnection($conn);
+}
+
+
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 unset($_SESSION["rimborso"]);
@@ -9,7 +19,7 @@ if (isset($_POST['azione']) && $_POST['azione']=="elimina_acquisto"){
   if(!empty($_SESSION["record_acquisti"])) {
      foreach($_SESSION["record_acquisti"] as $key => $value){
      if($_POST["nome_prod"] == $key && $_POST["data_acq"]==$value["data"]){
-      $sql = "DELETE FROM Acquisti WHERE Utenti_idUtenti='" . $_SESSION["id_utente"] ."' AND
+      $sql = "DELETE FROM Acquisti WHERE Utenti_idUtenti='" . $_SESSION['idUtente'] ."' AND
       ProdottiInVendita_idProdotto = '".$_SESSION["coppie_acquisto"][$_POST["nome_prod"]]["codice_p"]."'
       AND Data ='" . $_POST["data_acq"] ."' ";
       $connection = openconnection();
@@ -137,7 +147,7 @@ if (isset($_POST['azione']) && $_POST['azione']=="rimborso"){
                                    <tbody>
                                      <?php
                                      $conn = openconnection();
-                                     $sql = "SELECT * FROM Acquisti WHERE Utenti_idUtenti='" . $_SESSION["id_utente"] . "'";
+                                     $sql = "SELECT * FROM Acquisti WHERE Utenti_idUtenti='" . $_SESSION['idUtente'] . "'";
                                      $result = $conn->query($sql);
                                      if(!$result){
                                          echo $conn ->error;
@@ -175,7 +185,7 @@ if (isset($_POST['azione']) && $_POST['azione']=="rimborso"){
                                            );
 
                                          }
-                                         
+
                                          $rimborso_no = "non richiesto";
                                          $rimborso_si = "Rimborso in attesa di approvazione";
                                          //dati dell'acquisto

@@ -66,6 +66,7 @@ require_once 'db/database.php';
                   header("location: login_section/register.php");
                 }
               }
+
         }
         elseif(isset($_POST["Username"]) && $_SERVER['REQUEST_METHOD'] === 'POST' && $_SESSION['Provenience'] == 'login')
          { //Controllo per il login
@@ -80,6 +81,11 @@ require_once 'db/database.php';
               $_SESSION['login_status'] = 'No';
               header("location: login_section/login.php");
           }
+          //ottieni username e id per tutta la sessione:
+          $sql = "SELECT * FROM Utenti u WHERE u.Username='".$com["Username"]."' AND u.Password='".$com["password"]."'";
+          $result = $conn->query($sql);
+          $row = $result->fetch_assoc();
+          $_SESSION['idUtente'] = $row['idUtenti'];
           $_SESSION['Username_utente'] = $com['Username'];
           closeconnection($conn);
         }
